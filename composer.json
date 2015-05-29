@@ -1,0 +1,44 @@
+{
+  "name": "Pack/Nextpack",
+  "description": "Package Bootstrap",
+  "license": "MIT",
+  "keywords": [
+    "NextPack"
+  ],
+  "authors": [
+    {
+      "name": "Mahmoud Zalt",
+      "email": "mahmoud@zalt.me",
+      "homepage": "http://www.mahmoudzalt.com",
+      "role": "Coffee Maker :)"
+    }
+  ],
+  "require": {
+    "php": ">=5.4.0",
+    "nextpack/library": "dev-master"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "4.*",
+    "mockery/mockery": "0.*",
+    "symfony/var-dumper": "2.*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Nextpack\\Nextpack\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Nextpack\\Nextpack\\Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "phpunit"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    }
+  },
+  "minimum-stability": "stable"
+}
