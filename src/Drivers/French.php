@@ -18,7 +18,7 @@ class French extends Driver implements SayInterface
      */
     public function hello($name)
     {
-        return sprintf($this->get('format'), $name);
+        return sprintf($this->get('format'), 'Bonjour', $name);
     }
 
 }

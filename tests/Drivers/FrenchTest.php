@@ -1,7 +1,6 @@
 <?php
 namespace Nextpack\Nextpack\Drivers\Tests;
 
-use Nextpack\Library\UndefinedPropertyException;
 use Nextpack\Nextpack\Tests\TestCase;
 use Nextpack\Nextpack\Drivers\French;
 
@@ -21,11 +20,11 @@ class FrenchTest extends TestCase
     public function testReadingConfigurations()
     {
         $configurations = [
-            'format' => 'Salut %s.',
+            'format' => '%s, %s...',
         ];
 
         $input = 'Mahmoud Zalt';
-        $expectedOutput = 'Salut Mahmoud Zalt.';
+        $expectedOutput = 'Bonjour, Mahmoud Zalt...';
 
         $driver = New French($configurations);
         $output = $driver->hello($input);

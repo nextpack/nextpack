@@ -38,13 +38,13 @@ return [
 
         'english' => [
 
-            'format' => 'Hello, %s.',
+            'format' => '%s, %s!',
 
         ],
 
         'french' => [
 
-            'format' => 'Bonjour, %s.',
+            'format' => '%s, %s :)',
 
         ],
 

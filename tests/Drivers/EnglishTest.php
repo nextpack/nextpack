@@ -20,11 +20,11 @@ class EnglishTest extends TestCase
     public function testReadingConfigurations()
     {
         $configurations = [
-            'format' => 'Hi %s.',
+            'format' => '%s, %s :D',
         ];
 
         $input = 'Mahmoud Zalt';
-        $expectedOutput = 'Hi Mahmoud Zalt.';
+        $expectedOutput = 'Hello, Mahmoud Zalt :D';
 
         $driver = New English($configurations);
         $output = $driver->hello($input);

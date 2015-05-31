@@ -20,7 +20,7 @@ class SayTest extends TestCase
     public function testSayingHello()
     {
         $input = 'Mahmoud Zalt';
-        $expectedOutput = 'Hello, Mahmoud Zalt.';
+        $expectedOutput = 'Hello, Mahmoud Zalt!';
 
         print $output = (new Say(new NameValidator()))->hello($input); // printing just for fun :)
 
