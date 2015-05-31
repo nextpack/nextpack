@@ -26,7 +26,7 @@ class FrenchTest extends TestCase
         $input = 'Mahmoud Zalt';
         $expectedOutput = 'Bonjour, Mahmoud Zalt...';
 
-        $driver = New French($configurations);
+        $driver = (New French())->make($configurations);
         $output = $driver->hello($input);
 
         $this->assertEquals($output, $expectedOutput);
@@ -43,7 +43,7 @@ class FrenchTest extends TestCase
 
         $input = 'Mahmoud Zalt';
 
-        $driver = New French($configurations);
+        $driver = (New French())->make($configurations);
         $driver->hello($input);
 
     }
