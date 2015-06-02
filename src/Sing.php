@@ -1,6 +1,8 @@
 <?php
 namespace Nextpack\Nextpack;
 
+use Nextpack\Library\Config;
+
 /**
  * The Access Point to your package functionality.
  *

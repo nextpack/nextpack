@@ -1,9 +1,10 @@
 {
   "name": "nextpack/nextpack",
-  "description": "Package Bootstrap",
+  "description": "Nextpack is a PHP Packages Framework (Starter Project)",
   "license": "MIT",
   "keywords": [
-    "NextPack"
+    "NextPack",
+    "Starter"
   ],
   "authors": [
     {
