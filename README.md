@@ -1,12 +1,6 @@
 # Nextpack
 
-
-
-
-## Introduction
 [![Mahmoud Zalt](https://img.shields.io/badge/Author-Mahmoud%20Zalt-orange.svg)](http://www.mahmoudzalt.com)
-
-
 
 Nextpack is a PHP Package Framework (Starter Project). 
 Nextpack is the fastest solution for building high quality PHP Packages. 
@@ -21,7 +15,7 @@ Nextpack was created to help PHP developers producing more Open Source Composer 
 
 **Where this comes from!** I found myself doing the same things _(Setup, Structure, Configuration, Basic Functionality)_ over and over, everytime I start developing an Open Source PHP package. And there where the idea of combining all those common things as a Framework came to my mind, and the `Nextpack` project was born.
 
-The Nextpack Framework strives to facilitates and boosts the development proccess of PHP Packages. And it highly recommend producing framework agnostic packages (that can be used in any codebase).
+The Nextpack Framework strives to facilitates and boosts the development process of PHP Packages. And it highly recommend producing framework agnostic packages (that can be used in any codebase).
 
 
 
@@ -101,7 +95,7 @@ But before the customization steps, I will explain the sample code shipped with 
 
 
 
-##Sample Code:
+###Sample Code:
 
 Nextpack is shipped with a samples code, to help you get an overall idea on where to place your code.
 
@@ -119,8 +113,8 @@ The two Sample Features are:
 When you open the `src` directory, you will find `Say.php` and `Sing.php` they are the package API's (Entry points). Those two API's will be called by the user to get the package do what it's expected to do.
 
 
-####Feature 1: (Sing a Song)
-Feature 1 demonstrates the simplest scenario, it shows how to write the business logic inside the API class. (no drivers envlolved).
+##### Feature 1: (Sing a Song)
+Feature 1 demonstrates the simplest scenario, it shows how to write the business logic inside the API class. (no drivers involved).
 
 ```php
 class Sing extends Handler
@@ -140,7 +134,7 @@ print $song = (new Sing())->song('Bang Bang');
 The user create an instance of `Sing` API then call the function `song()` of the class passing a string and getting a string back.
 
 
-####Feature 2: (Say Hello)
+##### Feature 2: (Say Hello)
 Feature 2 demonstrates the drivers scenario, it shows how to write the business logic inside a driver. _(this gives the users the ability to select their drivers)_.
 
 ```php
@@ -183,13 +177,13 @@ All the drivers classes exist in the `src/Drivers`, alongside the `Driver.php` w
 
 
 
-## Customization:
+### Customization:
 
 To make this pakage yours, you need to customize it and remove the code samples:
 
 1. Chage the namespace of the application from `Nextpack\Nextpack` to your `Vendor-name\Package-name`
 2. Update the following values in `composer.json`: `name`, `description`, `keywords`, `authors`, `autoload`. (you can of course edit anything else you want).
-8. Delete `Say.php` and `Sing.php`, then add your `Custom.php` API classe.
+8. Delete `Say.php` and `Sing.php`, then add your `Custom.php` API class.
 3. Delete `English.php`, `French.php` and `SayInterface.php`, then add your `Custom.php` Driver classes (if you need it).
 4. Delete `NameValidator.php` and `MissedNameException.php`.
 5. Rename `SayFacadeAccessor.php` and update the returned string inside the `getFacadeAccessor()` function.
@@ -279,7 +273,7 @@ However a safer way to access these class properties is by using the `get()` fun
 To access values from outside the driver specific configurations scope, you can call the `$this->getAll()` and get all the config file as array.
 
 ```php
-// access configuration value as attribite
+// access configuration value as attribute
 $accessToken = $this->accessToken;
 	
 //  access configuration value using a safe function [best way]
@@ -354,7 +348,7 @@ Usage example from the API class:
 
 
 
-### Dependancy Injection
+### Dependency Injection
 You can inject any class you want in any API or Driver's class.
 
 In this example I am injecting a `Validator` class.
@@ -420,7 +414,7 @@ $ ./vendor/bin/phpunit
 
 ## Contributing
 
-Please check out our contribution [Guidelines](https://github.com/::Vendor-Name/::package-name/blob/master/CONTRIBUTING.md) for details.
+Please check out our contribution [Guidelines](https://github.com/nextpack/nextpack/blob/master/CONTRIBUTING.md) for details.
 
 
 
