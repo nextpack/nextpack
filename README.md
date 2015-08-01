@@ -1,28 +1,31 @@
 # Nextpack
 
+[![Latest Stable Version](https://poser.pugx.org/nextpack/nextpack/v/stable)](https://packagist.org/packages/nextpack/nextpack) 
+[![Total Downloads](https://poser.pugx.org/nextpack/nextpack/downloads)](https://packagist.org/packages/nextpack/nextpack) 
+[![Latest Unstable Version](https://poser.pugx.org/nextpack/nextpack/v/unstable)](https://packagist.org/packages/nextpack/nextpack) 
+[![License](https://poser.pugx.org/nextpack/nextpack/license)](https://packagist.org/packages/nextpack/nextpack)
+[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/nextpack/nextpack?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![Mahmoud Zalt](https://img.shields.io/badge/Author-Mahmoud%20Zalt-orange.svg)](http://www.mahmoudzalt.com)
 
-Nextpack is a PHP Package Framework (Starter Project). 
-Nextpack is the fastest solution for building high quality PHP Packages. 
-
-
+Nextpack is a PHP Package Framework!
+(It is deisgned to help you build high quality PHP Packages faster).
 
 
 
 ### Vision
 
-Nextpack was created to help PHP developers producing more Open Source Composer Packages.
+Nextpack was created to help PHP developers producing more PHP Open Source Composer Packages with the least amount of time and effort.
 
-**Where this comes from!** I found myself doing the same things _(Setup, Structure, Configuration, Basic Functionality)_ over and over, everytime I start developing an Open Source PHP package. And there where the idea of combining all those common things as a Framework came to my mind, and the `Nextpack` project was born.
+**Where this comes from!** I found myself doing the same things _(Setup, Structure, Configuration, Basic Functionality)_ over and over, everytime I start developing a PHP package. And there where the idea of combining all those common things as a Framework came to my mind, and the `Nextpack` project was born.
 
-The Nextpack Framework strives to facilitates and boosts the development process of PHP Packages. And it highly recommend producing framework agnostic packages (that can be used in any codebase).
+The Nextpack Framework strives to facilitates and boosts the development process of Composer Packages. And it highly recommend producing framework agnostic packages (that can be used in any codebase).
 
 
 
 
 
 ### Questions?
-If you have any question, send me an email on mahmoud@zalt.me
+If you have any questions please share it with us on [https://gitter.im/nextpack/nextpack]() or email me on (mahmoud@zalt.me).
 
 
 
@@ -70,6 +73,7 @@ __Nextpack includes:__
 
 1. `git clone https://github.com/nextpack/nextpack.git`
 2. `composer update`
+3. make sure everything is OK by running the tests `phpunit`
 
 
 
@@ -88,116 +92,28 @@ The Nextpack Framework `nextpack/nextpack` requires a Library `nextpack/library`
 
 ## Usage
 
-After you install a fresh copy of the Nextpack starter, you need to customize it for your need. 
-But before the customization steps, I will explain the sample code shipped with the package.
+After you install a fresh copy of Nextpack, the only thing you need to do is customizing it to meet your needs, before start codig your package.
 
-
-
-
-
-###Sample Code:
-
-Nextpack is shipped with a samples code, to help you get an overall idea on where to place your code.
-
-The two Sample Features are:
-
-**Feature 1:** Sings a song by it's `$name`
-
-**Feature 2:** Say `Hello` to `$name` with any supported language (`English` or `French`). 
-
-> In the terminology of Nextpack, everything that can be supported such as (Providers, API's, Third parties...) are called `Drivers`. 
-> 
-> In this particular case the languages are the drivers. (because you can support many languages).
-
-
-When you open the `src` directory, you will find `Say.php` and `Sing.php` they are the package API's (Entry points). Those two API's will be called by the user to get the package do what it's expected to do.
-
-
-##### Feature 1: (Sing a Song)
-Feature 1 demonstrates the simplest scenario, it shows how to write the business logic inside the API class. (no drivers involved).
-
-```php
-class Sing extends Handler
-{
-    public function song($songName)
-    {
-        return "Can you hear me singing $songName :P";
-    }
-}
-```
-The usage of this API class will be as follow:
-
-```php
-print $song = (new Sing())->song('Bang Bang');
-```
-
-The user create an instance of `Sing` API then call the function `song()` of the class passing a string and getting a string back.
-
-
-##### Feature 2: (Say Hello)
-Feature 2 demonstrates the drivers scenario, it shows how to write the business logic inside a driver. _(this gives the users the ability to select their drivers)_.
-
-```php
-class Say extends Handler
-{
-    public function hello($name)
-    {
-        return $this->driver()->hello($name);
-    }
-}
-```
-
-An instance of a driver is initialized using `$this->driver()`, then a driver function `->hello($name)` is called on the instance.
-
-The driver initialized is the default driver selected in the `config` file (`'default' => 'english',`) 
-
-```php
-return [
-    'default' => 'english',
-    'namespace' => 'Nextpack\\Nextpack\\Drivers\\',
-    'drivers' => [
-        'english' => [
-            'format' => '%s, %s!',
-        ],
-        'french' => [
-            'format' => '%s, %s :)',
-        ],
-    ],
-];
-```
-
-All the drivers classes exist in the `src/Drivers`, alongside the `Driver.php` which every driver extends from.
-
-
-
-
-
-
-
-
+But before the customization steps, if this is the first time you use the package it is recommended to read the [Tutorial](#tutorial) first, It explains the sample code shipped with the package.
 
 
 ### Customization:
 
-To make this pakage yours, you need to customize it and remove the code samples:
+The following steps instruct you to customize your package and remove the code samples of Nextpack:
 
-1. Chage the namespace of the application from `Nextpack\Nextpack` to your `Vendor-name\Package-name`
-2. Update the following values in `composer.json`: `name`, `description`, `keywords`, `authors`, `autoload`. (you can of course edit anything else you want).
-8. Delete `Say.php` and `Sing.php`, then add your `Custom.php` API class.
-3. Delete `English.php`, `French.php` and `SayInterface.php`, then add your `Custom.php` Driver classes (if you need it).
-4. Delete `NameValidator.php` and `MissedNameException.php`.
-5. Rename `SayFacadeAccessor.php` and update the returned string inside the `getFacadeAccessor()` function.
-6. Rename `NextpackServiceProvider` and update the content of the following functions: `facadeBindings()`, `configPublisher()` and `implementationBindings()`.
-7. Update the config file `nextpack.php`, (or remove the file if you don't need it)
+1. Chage the namespace of the application from `Nextpack\Nextpack` to your `Vendor-name\Package-name`.
+2. Update the following values in `composer.json`:   `name`, `description`, `keywords`, `authors`, `autoload`. (you can of course edit anything else you want).
+3. Delete `Say.php` and `Sing.php`, then add your `Custom.php` API class.
+4. Delete `English.php`, `French.php` and `SayInterface.php`, then add your `Custom.php` Driver classes (if necessary).
+5. Delete `NameValidator.php` and `MissedNameException.php`.
+6. Rename `SayFacadeAccessor.php` and update the returned string inside the `getFacadeAccessor()` function.
+7. Rename `NextpackServiceProvider` and update the content of the following functions: `facadeBindings()`, `configPublisher()` and `implementationBindings()`.
+8. Update the config file `nextpack.php`, (or remove it if not necessary).
 9. Delete this `README.md` file. And rename the `README.md.READY` to `README.md`.
 10. Update `CONTRIBUTING.md` and `LICENSE` by replacing `::Vendor-Name` and `::Package-Name` with your vendor and package names.
 11. Open the new `README.md` and replace the following: 
-12. Delete everytihng in the `tests` directory except the `TestCase.php`
+12. Delete everytihng in the `tests` directory except the `TestCase.php` (then add your tests from scratch).
 13. Update the "testsuite" name in the `phpunit.xml`.
-
-
-
-
 
 
 
@@ -406,6 +322,103 @@ To run the tests, run the following command from the project folder.
 ``` bash
 $ ./vendor/bin/phpunit
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+<a name="tutorial"></a>
+## Tutorial   
+
+
+Nextpack is shipped with a samples code, to help you get an overall idea about where to place your code.
+
+The two Sample Features are:
+
+**Feature 1:** Sings a song by it's `$name`
+
+**Feature 2:** Say `Hello` to `$name` with any supported language (`English` or `French`). 
+
+> In the terminology of Nextpack, everything that can be supported such as (Providers, API's, Third parties...) are called `Drivers`. 
+> 
+> In this particular case the languages are the drivers. (because you can support many languages).
+
+
+When you open the `src` directory, you will find `Say.php` and `Sing.php` they are the package API's (Entry points). Those two API's will be called by the user to get the package do what it's expected to do.
+
+
+##### Feature 1: (Sing a Song)
+Feature 1 demonstrates the simplest scenario, it shows how to write the business logic inside the API class. (no drivers involved).
+
+```php
+class Sing extends Handler
+{
+    public function song($songName)
+    {
+        return "Can you hear me singing $songName :P";
+    }
+}
+```
+The usage of this API class will be as follow:
+
+```php
+print $song = (new Sing())->song('Bang Bang');
+```
+
+The user create an instance of `Sing` API then call the function `song()` of the class passing a string and getting a string back.
+
+
+##### Feature 2: (Say Hello)
+Feature 2 demonstrates the drivers scenario, it shows how to write the business logic inside a driver. _(this gives the users the ability to select their drivers)_.
+
+```php
+class Say extends Handler
+{
+    public function hello($name)
+    {
+        return $this->driver()->hello($name);
+    }
+}
+```
+
+An instance of a driver is initialized using `$this->driver()`, then a driver function `->hello($name)` is called on the instance.
+
+The driver initialized is the default driver selected in the `config` file (`'default' => 'english',`) 
+
+```php
+return [
+    'default' => 'english',
+    'namespace' => 'Nextpack\\Nextpack\\Drivers\\',
+    'drivers' => [
+        'english' => [
+            'format' => '%s, %s!',
+        ],
+        'french' => [
+            'format' => '%s, %s :)',
+        ],
+    ],
+];
+```
+
+All the drivers classes exist in the `src/Drivers`, alongside the `Driver.php` which every driver extends from.
+
+
+
+
+
+
+
+
+
+
 
 
 
