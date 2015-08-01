@@ -7,18 +7,22 @@
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/nextpack/nextpack?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![Mahmoud Zalt](https://img.shields.io/badge/Author-Mahmoud%20Zalt-orange.svg)](http://www.mahmoudzalt.com)
 
-Nextpack is a PHP Package Framework!
-(It is deisgned to help you build high quality PHP Packages faster).
+**Nextpack is a PHP Package Framework** (Designed to help you build high quality PHP Packages faster).
+
+The Nextpack Framework strives to facilitates and boosts the development process of PHP Packages. And it highly recommend producing framework agnostic packages.
+
+
+
 
 
 
 ### Vision
 
-Nextpack was created to help PHP developers producing more PHP Open Source Composer Packages with the least amount of time and effort.
+Nextpack was created to help PHP developers producing more Open Source Composer Packages with the least amount of time and effort.
 
 **Where this comes from!** I found myself doing the same things _(Setup, Structure, Configuration, Basic Functionality)_ over and over, everytime I start developing a PHP package. And there where the idea of combining all those common things as a Framework came to my mind, and the `Nextpack` project was born.
 
-The Nextpack Framework strives to facilitates and boosts the development process of Composer Packages. And it highly recommend producing framework agnostic packages (that can be used in any codebase).
+
 
 
 
@@ -48,7 +52,7 @@ __Nextpack includes:__
 	- Continuous Integration: **Travis** and **Scrutinizer** (`.scrutinizer.yml`, `.travis.yml`)
 	- Testing: **PHPUnit** (`phpunit.xml`)
 	- Package Manager: **Composer** (`composer.json`)
-- Common functionalities, (provided by the **Nextpack Library** `nextpack/library`).
+- **Common functionalities**, (provided by the **Nextpack Library** `nextpack/library`).
 	- **Read config files**, and serve it in the package classes
 	- **Initialize drivers automatically** _"in case the package supports multiple drivers/providers"_
 
