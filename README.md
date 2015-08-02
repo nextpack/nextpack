@@ -1,10 +1,8 @@
 # Nextpack
 
 [![Latest Stable Version](https://poser.pugx.org/nextpack/nextpack/v/stable)](https://packagist.org/packages/nextpack/nextpack) 
-[![Total Downloads](https://poser.pugx.org/nextpack/nextpack/downloads)](https://packagist.org/packages/nextpack/nextpack) 
-[![Latest Unstable Version](https://poser.pugx.org/nextpack/nextpack/v/unstable)](https://packagist.org/packages/nextpack/nextpack) 
-[![License](https://poser.pugx.org/nextpack/nextpack/license)](https://packagist.org/packages/nextpack/nextpack)
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/nextpack/nextpack?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![License](https://poser.pugx.org/nextpack/nextpack/license)](https://packagist.org/packages/nextpack/nextpack)
 [![Mahmoud Zalt](https://img.shields.io/badge/Author-Mahmoud%20Zalt-orange.svg)](http://www.mahmoudzalt.com)
 
 **Nextpack is a PHP Package Framework** (Designed to help you build high quality PHP Packages faster).
