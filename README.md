@@ -24,19 +24,32 @@ Nextpack was created to help PHP developers producing more Open Source Composer 
 
 
 
-
-
 ### Questions?
-If you have any questions please share it with us on [https://gitter.im/nextpack/nextpack]() or email me on (mahmoud@zalt.me).
+If you have any questions please share it with us on [Gitter](https://gitter.im/nextpack/nextpack) or email me on (mahmoud@zalt.me).
 
 
 
 
 
 
+## Contents
+
+- [Highlights](#Highlights)
+- [Installation](#installation)
+- [Customization](#Customization)
+- [Documentation](#Documentation)
+	- [Create public API class](#cpac) 
+	- [Read configuration file](#rtcf)
+	- [Create Driver class](#cadc)
+	- [Initialize Driver](#inad)
+	- [Dependency Injection](#dpin)
+	- [Add Tests](#adte)
+- [Tutorial](#Tutorial)
 
 
 
+
+<a name="Highlights"></a>
 ## Highlights
 
 __Nextpack includes:__
@@ -62,16 +75,21 @@ __Nextpack includes:__
 	
 	
 	
-	
-## Requirement
+
+
+
+
+
+<a name="Installation"></a>
+## Installation
+
+
+##### Software Requirement
 - Git
 - Composer
 
 
-
-
-
-## Install
+##### Installation Steps
 
 1. `git clone https://github.com/nextpack/nextpack.git`
 2. `composer update`
@@ -80,7 +98,7 @@ __Nextpack includes:__
 
 
 
-
+<a name="Dependencies"></a>
 ##### Internal Composer Dependencies:
 
 The Nextpack Framework `nextpack/nextpack` requires a Library `nextpack/library` which in turn requires `illuminate/support`, `illuminate/config` and `symfony/finder`.
@@ -91,17 +109,17 @@ The Nextpack Framework `nextpack/nextpack` requires a Library `nextpack/library`
 
 
 
-
-## Usage
+<a name="Customization"></a>
+## Customization
 
 After you install a fresh copy of Nextpack, the only thing you need to do is customizing it to meet your needs, before start codig your package.
 
 But before the customization steps, if this is the first time you use the package it is recommended to read the [Tutorial](#tutorial) first, It explains the sample code shipped with the package.
 
 
-### Customization:
+### Steps:
 
-The following steps instruct you to customize your package and remove the code samples of Nextpack:
+The steps include removing the code samples shipped with the Nextpack:
 
 1. Chage the namespace of the application from `Nextpack\Nextpack` to your `Vendor-name\Package-name`.
 2. Update the following values in `composer.json`:   `name`, `description`, `keywords`, `authors`, `autoload`. (you can of course edit anything else you want).
@@ -123,11 +141,11 @@ The following steps instruct you to customize your package and remove the code s
 
 
 
+<a name="Documentation"></a>
 ## Documentation
 
 
-
-
+<a name="cpac"></a>
 ### Create public API class
 
 The API classes are normal classes, usually exist on the root of the `src` directory, and they all extend from `Nextpack\Nextpack\Handler` abstract class.
@@ -156,13 +174,13 @@ The usage of this class `Phone` will be:
 
 
 
-
-### Read the configuration file
-
-
+<a name="rtcf"></a>
+### Read configuration file
 
 
-#### From API Classes:
+
+
+#### From API Class:
 
 To read the values of your default config file form an API class, you need to inject `Nextpack\Library\Config` class in your constructor. 
 And then call the function `get('fileName.key');`
@@ -182,7 +200,7 @@ And then call the function `get('fileName.key');`
 
 
 
-#### From Driver Classes:
+#### From Driver Class:
 
 You can access the driver configurations as you access the class properties `$this->property`.
 
@@ -208,7 +226,7 @@ $allConfigurations = $this->getAll();   // (returns all the config file)
 
 
 
-
+<a name="cadc"></a>
 ### Create a Driver class
 
 The driver classes are normal classes, usually exist in the `src/Drivers` directory, and they all extend from `Nextpack\Nextpack\Drivers\Driver` abstract class.
@@ -230,6 +248,7 @@ Example:
 
 
 
+<a name="inad"></a>
 ### Initialize a Driver
 
 To initialize an instance of the default driver selected in the config file all you have to do is call `$this->driver()` function from any of your API classes.
@@ -266,6 +285,11 @@ Usage example from the API class:
 
 
 
+
+
+
+
+<a name="dpin"></a>
 ### Dependency Injection
 You can inject any class you want in any API or Driver's class.
 
@@ -282,6 +306,9 @@ In this example I am injecting a `Validator` class.
 
 
 
+
+
+<a name="adte"></a>
 ### Add Tests
 
 The test classes are normal classes, they can only exist in the `tests` directory, and they all extend from `Nextpack\Nextpack\Tests\TestCase` class.
@@ -314,30 +341,7 @@ class SingTest extends TestCase
 
 
 
-
-
-
-## Test
-
-To run the tests, run the following command from the project folder.
-
-``` bash
-$ ./vendor/bin/phpunit
-```
-
-
-
-
-
-
-
-
-
-
-
-
-
-<a name="tutorial"></a>
+<a name="Tutorial"></a>
 ## Tutorial   
 
 
@@ -414,6 +418,24 @@ All the drivers classes exist in the `src/Drivers`, alongside the `Driver.php` w
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+## Test
+
+To run the tests, run the following command from the project folder.
+
+``` bash
+$ ./vendor/bin/phpunit
+```
 
 
 
