@@ -5,9 +5,9 @@
 [![License](https://poser.pugx.org/nextpack/nextpack/license)](https://packagist.org/packages/nextpack/nextpack)
 [![Mahmoud Zalt](https://img.shields.io/badge/Author-Mahmoud%20Zalt-orange.svg)](http://www.mahmoudzalt.com)
 
-**Nextpack is a PHP Package Framework** (Designed to help you build high quality PHP Packages faster).
+**A PHP Package Framework** (Designed to help you build high quality PHP Packages faster).
 
-The Nextpack Framework strives to facilitates and boosts the development process of PHP Packages. And it highly recommend producing framework agnostic packages.
+Nextpack strives to facilitates and boosts the development process of PHP Packages. And it highly recommend producing framework agnostic packages.
 
 
 
@@ -38,12 +38,12 @@ If you have any questions please share it with us on [Gitter](https://gitter.im/
 - [Installation](#installation)
 - [Customization](#Customization)
 - [Documentation](#Documentation)
-	- [Create public API class](#cpac) 
-	- [Read configuration file](#rtcf)
-	- [Create Driver class](#cadc)
-	- [Initialize Driver](#inad)
-	- [Dependency Injection](#dpin)
-	- [Add Tests](#adte)
+  - [Create public API class](#cpac) 
+  - [Read configuration file](#rtcf)
+  - [Create Driver class](#cadc)
+  - [Initialize Driver](#inad)
+  - [Dependency Injection](#dpin)
+  - [Add Tests](#adte)
 - [Tutorial](#Tutorial)
 
 
@@ -59,22 +59,22 @@ __Nextpack includes:__
 - **Code samples**, (demonstrating _HOW_ and _WHERE_ the code should be implemented)
 - **Test samples**, (with PHPUnit)
 - **Basic configurations**, (for the most popular required tools)
-	- Version Control: **Git** (`.gitattributes`, `.gitignore`)
-	- Continuous Integration: **Travis** and **Scrutinizer** (`.scrutinizer.yml`, `.travis.yml`)
-	- Testing: **PHPUnit** (`phpunit.xml`)
-	- Package Manager: **Composer** (`composer.json`)
+  - Version Control: **Git** (`.gitattributes`, `.gitignore`)
+  - Continuous Integration: **Travis** and **Scrutinizer** (`.scrutinizer.yml`, `.travis.yml`)
+  - Testing: **PHPUnit** (`phpunit.xml`)
+  - Package Manager: **Composer** (`composer.json`)
 - **Common functionalities**, (provided by the **Nextpack Library** `nextpack/library`).
-	- **Read config files**, and serve it in the package classes
-	- **Initialize drivers automatically** _"in case the package supports multiple drivers/providers"_
+  - **Read config files**, and serve it in the package classes
+  - **Initialize drivers automatically** _"in case the package supports multiple drivers/providers"_
 
-	
-	
-	
-	
-	
-	
-	
-	
+  
+  
+  
+  
+  
+  
+  
+  
 
 
 
@@ -157,17 +157,17 @@ Example:
    {
       public function call($number)
       {
-      		// business logic..
-      		return 'Alo Alo ' . $number;
+          // business logic..
+          return 'Alo Alo ' . $number;
       }
    }
 ```
 The usage of this class `Phone` will be:
 
 ```php
-	$phone = new Phone();
-	$message = phone->call('96171137427');
-	print message;
+  $phone = new Phone();
+  $message = phone->call('96171137427');
+  print message;
 ```
 
 
@@ -211,10 +211,10 @@ To access values from outside the driver specific configurations scope, you can 
 ```php
 // access configuration value as attribute
 $accessToken = $this->accessToken;
-	
+  
 //  access configuration value using a safe function [best way]
 $accessToken = $this->get('accessToken');
-	
+  
 // access configuration value exist outside the scope of the driver in the config file 
 $allConfigurations = $this->getAll();   // (returns all the config file)
 ```
@@ -238,8 +238,8 @@ Example:
    {
       public function call($number)
       {
-      		// business logic..
-      		return 'Alo, This is the Vodafone Mobile Operator';
+          // business logic..
+          return 'Alo, This is the Vodafone Mobile Operator';
       }
    }
 ```
@@ -462,7 +462,7 @@ Please check out our contribution [Guidelines](https://github.com/nextpack/nextp
 
 ## Support
 
-[Issues](https://github.com/nextpack/nextpack/issues) managed by Github.
+[Issues](https://github.com/nextpack/nextpack/issues) on Github.
 
 
 
@@ -473,7 +473,7 @@ Please check out our contribution [Guidelines](https://github.com/nextpack/nextp
 
 ## Credits
 
-- [Mahmoud Zalt](https://github.com/Pack)
+- [Mahmoud Zalt](https://github.com/Mahmoudz)
 - [All Contributors](../../contributors)
 
 
@@ -485,7 +485,7 @@ Please check out our contribution [Guidelines](https://github.com/nextpack/nextp
 
 ## License
 
-The MIT License (MIT). Please see [License File](https://github.com/nextpack/nextpack/blob/master/LICENSE) for more information.
+The MIT License (MIT). See the [License File](https://github.com/nextpack/nextpack/blob/master/LICENSE) for more information.
 
 
 
