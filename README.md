@@ -121,9 +121,9 @@ But before the customization steps, if this is the first time you use the packag
 
 The steps include removing the code samples shipped with the Nextpack:
 
-1. Chage the namespace of the application from `Nextpack\Nextpack` to your `Vendor-name\Package-name`.
-2. Update the following values in `composer.json`:   `name`, `description`, `keywords`, `authors`, `autoload`. (you can of course edit anything else you want).
-3. Delete `Say.php` and `Sing.php`, then add your `Custom.php` API class.
+1. Change the namespace of the application from `Nextpack\Nextpack` to your `Vendor-name\Package-name`. (you can do this using the [Replace All] feature of your IDE).
+2. Update the following values in `composer.json`:  `name`, `description`, `keywords`, `authors`, `autoload` and don't forget to update the `namespaces`. (you might need to run `composer dump-autoload` after the changes).
+3. Delete the files `Say.php` and `Sing.php`, then add your `Custom.php` API class.
 4. Delete `English.php`, `French.php` and `SayInterface.php`, then add your `Custom.php` Driver classes (if necessary).
 5. Delete `NameValidator.php` and `MissedNameException.php`.
 6. Rename `SayFacadeAccessor.php` and update the returned string inside the `getFacadeAccessor()` function.
