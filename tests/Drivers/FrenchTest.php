@@ -1,21 +1,21 @@
 <?php
+
 namespace Nextpack\Nextpack\Drivers\Tests;
 
-use Nextpack\Nextpack\Tests\TestCase;
 use Nextpack\Nextpack\Drivers\French;
+use Nextpack\Nextpack\Tests\TestCase;
 
 /**
- * Class FrenchTest
+ * Class FrenchTest.
  *
  * @category test
- * @package  Nextpack\Nextpack\Drivers\Tests
+ *
  * @author   Mahmoud Zalt <mahmoud@zalt.me>
  */
 class FrenchTest extends TestCase
 {
-
     /**
-     * Test reading the configurations
+     * Test reading the configurations.
      */
     public function testReadingConfigurations()
     {
@@ -26,7 +26,7 @@ class FrenchTest extends TestCase
         $input = 'Mahmoud Zalt';
         $expectedOutput = 'Bonjour, Mahmoud Zalt...';
 
-        $driver = (New French())->make($configurations);
+        $driver = (new French())->make($configurations);
         $output = $driver->hello($input);
 
         $this->assertEquals($output, $expectedOutput);
@@ -43,9 +43,7 @@ class FrenchTest extends TestCase
 
         $input = 'Mahmoud Zalt';
 
-        $driver = (New French())->make($configurations);
+        $driver = (new French())->make($configurations);
         $driver->hello($input);
-
     }
-
 }

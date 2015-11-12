@@ -1,18 +1,16 @@
 <?php
-namespace Nextpack\Nextpack;
 
-use Nextpack\Library\Config;
+namespace Nextpack\Nextpack;
 
 /**
  * The Access Point to your package functionality.
  *
  * @category Access Point
- * @package  Nextpack\Nextpack
+ *
  * @author   Mahmoud Zalt <mahmoud@zalt.me>
  */
 class Sing extends Handler
 {
-
     /**
      * @param $songName
      *
@@ -22,5 +20,4 @@ class Sing extends Handler
     {
         return "Can you hear me singing $songName :P";
     }
-
 }

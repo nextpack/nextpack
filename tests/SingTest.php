@@ -1,18 +1,18 @@
 <?php
+
 namespace Nextpack\Nextpack\Tests;
 
 use Nextpack\Nextpack\Sing;
 
 /**
- * Class SingTest
+ * Class SingTest.
  *
  * @category Test
- * @package  Nextpack\Nextpack\Tests
+ *
  * @author   Mahmoud Zalt <mahmoud@zalt.me>
  */
 class SingTest extends TestCase
 {
-
     /**
      * Test the song function is returning the expected result.
      */
@@ -25,5 +25,4 @@ class SingTest extends TestCase
 
         $this->assertEquals($output, $expectedOutput);
     }
-
 }
