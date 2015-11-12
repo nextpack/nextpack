@@ -24,7 +24,6 @@ return [
     */
     'namespace' => 'Nextpack\\Nextpack\\Drivers\\',
 
-
     /*
     |--------------------------------------------------------------------------
     | Drivers Configuration

@@ -1,19 +1,19 @@
 <?php
+
 namespace Nextpack\Nextpack\Tests;
 
 use Nextpack\Nextpack\Say;
 use Nextpack\Nextpack\Validators\NameValidator;
 
 /**
- * Class SayTest
+ * Class SayTest.
  *
  * @category Test
- * @package  Nextpack\Nextpack\Tests
+ *
  * @author   Mahmoud Zalt <mahmoud@zalt.me>
  */
 class SayTest extends TestCase
 {
-
     /**
      * Test the hello function is returning the expected result.
      */

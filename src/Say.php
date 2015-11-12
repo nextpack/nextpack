@@ -1,4 +1,5 @@
 <?php
+
 namespace Nextpack\Nextpack;
 
 use Nextpack\Nextpack\Validators\NameValidator;
@@ -7,12 +8,11 @@ use Nextpack\Nextpack\Validators\NameValidator;
  * The Access Point to your package functionality.
  *
  * @category Access Point
- * @package  Nextpack\Nextpack
+ *
  * @author   Mahmoud Zalt <mahmoud@zalt.me>
  */
 class Say extends Handler
 {
-
     /**
      * @var \Nextpack\Nextpack\Validators\NameValidator
      */
@@ -39,5 +39,4 @@ class Say extends Handler
         // create an instance of the default driver defined in the config file, and call a method on it.
         return $this->driver()->hello($name);
     }
-
 }

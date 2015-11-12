@@ -1,18 +1,18 @@
 <?php
+
 namespace Nextpack\Nextpack;
 
 use Illuminate\Support\ServiceProvider;
 
 /**
- * Class NextpackServiceProvider
+ * Class NextpackServiceProvider.
  *
  * @category Service Provider
- * @package  Nextpack\Nextpack
+ *
  * @author   Mahmoud Zalt <mahmoud@zalt.me>
  */
 class NextpackServiceProvider extends ServiceProvider
 {
-
     /**
      * Indicates if loading of the provider is deferred.
      *
@@ -63,7 +63,7 @@ class NextpackServiceProvider extends ServiceProvider
     }
 
     /**
-     * Implementation Bindings
+     * Implementation Bindings.
      */
     private function implementationBindings()
     {
@@ -74,18 +74,18 @@ class NextpackServiceProvider extends ServiceProvider
     }
 
     /**
-     * Publish the Config file from the Package to the App directory
+     * Publish the Config file from the Package to the App directory.
      */
     private function configPublisher()
     {
         // When users execute Laravel's vendor:publish command, the config file will be copied to the specified location
         $this->publishes([
-            __DIR__ . '/Config/nextpack.php' => config_path('nextpack.php'),
+            __DIR__.'/Config/nextpack.php' => config_path('nextpack.php'),
         ]);
     }
 
     /**
-     * Facades Binding
+     * Facades Binding.
      */
     private function facadeBindings()
     {
@@ -112,11 +112,10 @@ class NextpackServiceProvider extends ServiceProvider
     }
 
     /**
-     * Registering Other Custom Service Providers (if you have)
+     * Registering Other Custom Service Providers (if you have).
      */
     private function serviceProviders()
     {
         // $this->app->register('...\...\...');
     }
-
 }

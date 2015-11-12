@@ -1,4 +1,5 @@
 <?php
+
 namespace Nextpack\Nextpack\Drivers;
 
 use Nextpack\Library\AbstractBaseDriver;
@@ -8,10 +9,9 @@ use Nextpack\Library\AbstractBaseDriver;
  * Every Driver must extend from this Driver.
  *
  * @category Driver Abstract
- * @package Nextpack\Nextpack\Drivers
+ *
  * @author  Mahmoud Zalt <mahmoud@zalt.me>
  */
 abstract class Driver extends AbstractBaseDriver
 {
-
 }
