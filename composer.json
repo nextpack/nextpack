@@ -16,7 +16,7 @@
   ],
   "require": {
     "php": ">=5.4.0",
-    "nextpack/library": "0.1.*"
+    "illuminate/config": "5.2.*"
   },
   "require-dev": {
     "phpunit/phpunit": "4.*",
@@ -25,7 +25,8 @@
   },
   "autoload": {
     "psr-4": {
-      "Nextpack\\Nextpack\\": "src"
+      "Nextpack\\Nextpack\\": "src",
+      "Nextpack\\Library\\": "src/library"
     }
   },
   "autoload-dev": {
