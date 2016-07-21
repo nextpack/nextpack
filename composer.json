@@ -16,7 +16,7 @@
   ],
   "require": {
     "php": ">=5.4.0",
-    "nextpack/library": "dev-master"
+    "nextpack/library": "0.1.*"
   },
   "require-dev": {
     "phpunit/phpunit": "4.*",
