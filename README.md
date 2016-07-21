@@ -121,19 +121,20 @@ But before the customization steps, if this is the first time you use the packag
 
 The steps include removing the code samples shipped with the Nextpack:
 
-1. Change the namespace of the application from `Nextpack\Nextpack` to your `Vendor-name\Package-name`. (you can do this using the [Replace All] feature of your IDE).
+1. Change the namespace of the application from `Nextpack\Nextpack` to your `Vendor-name\Package-name`. *(you can do this using the [Replace All] feature of your IDE).*
 2. Update the following values in `composer.json`:  `name`, `description`, `keywords`, `authors`, `autoload` and don't forget to update the `namespaces`. (you might need to run `composer dump-autoload` after the changes).
-3. Delete the files `Say.php` and `Sing.php`, then add your `Custom.php` API class.
-4. Delete `English.php`, `French.php` and `SayInterface.php`, then add your `Custom.php` Driver classes (if necessary).
-5. Delete `NameValidator.php` and `MissedNameException.php`.
-6. Rename `SayFacadeAccessor.php` and update the returned string inside the `getFacadeAccessor()` function.
-7. Rename `NextpackServiceProvider` and update the content of the following functions: `facadeBindings()`, `configPublisher()` and `implementationBindings()`.
-8. Update the config file `nextpack.php`, (or remove it if not necessary).
-9. Delete this `README.md` file. And rename the `README.md.READY` to `README.md`.
-10. Update `CONTRIBUTING.md` and `LICENSE` by replacing `::Vendor-Name` and `::Package-Name` with your vendor and package names.
-11. Open the new `README.md` and replace the following: 
-12. Delete everytihng in the `tests` directory except the `TestCase.php` (then add your tests from scratch).
-13. Update the "testsuite" name in the `phpunit.xml`.
+3. Run `composer install`
+4. Delete the files `Say.php` and `Sing.php`, then add your `Custom.php` API class.
+5. Delete `English.php`, `French.php` and `SayInterface.php`, then add your `Custom.php` Driver classes (if necessary).
+6. Delete `NameValidator.php` and `MissedNameException.php`.
+7. Rename `SayFacadeAccessor.php` and update the returned string inside the `getFacadeAccessor()` function.
+8. Rename `NextpackServiceProvider` and update the content of the following functions: `facadeBindings()`, `configPublisher()` and `implementationBindings()`.
+9. Update the config file `nextpack.php`, (or remove it if not necessary).
+10. Delete this `README.md` file. And rename the `README.md.READY` to `README.md`.
+11. Update `CONTRIBUTING.md` and `LICENSE` by replacing `::Vendor-Name` and `::Package-Name` with your vendor and package names.
+12. Open the new `README.md` and replace the following: 
+13. Delete everytihng in the `tests` directory except the `TestCase.php` (then add your tests from scratch).
+14. Update the "testsuite" name in the `phpunit.xml`.
 
 
 
