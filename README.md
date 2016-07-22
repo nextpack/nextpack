@@ -1,34 +1,18 @@
 # Nextpack (light)
 
 [![Latest Stable Version](https://poser.pugx.org/nextpack/nextpack/v/stable)](https://packagist.org/packages/nextpack/nextpack) 
-[![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/nextpack/nextpack?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![License](https://poser.pugx.org/nextpack/nextpack/license)](https://packagist.org/packages/nextpack/nextpack)
 [![Mahmoud Zalt](https://img.shields.io/badge/Author-Mahmoud%20Zalt-orange.svg)](http://www.zalt.me)
 
-**A PHP Package Framework** (Designed to help you build high quality PHP Packages faster).
+**NextPack** is a PHP & Laravel Packages Starter, (Designed to help you build high quality PHP Packages faster).
 
 **Nextpack** is a starter that you can clone and build your next open source package on top of.
 
-Nextpack strives to facilitates and boosts the development process of PHP Packages. And it highly recommend producing framework agnostic packages.
+It strives to facilitates and boosts the development process of PHP Packages. And it highly recommend producing framework agnostic packages.
 
 It's made to help PHP developers producing more Open Source Composer Packages with the least amount of time and effort.
 
-
-
-## Contents
-
-- [Highlights](#Highlights)
-- [Installation](#installation)
-- [Customization](#Customization)
-- [Documentation](#Documentation)
-  - [Create public API class](#cpac) 
-  - [Read configuration file](#rtcf)
-  - [Create Driver class](#cadc)
-  - [Initialize Driver](#inad)
-  - [Dependency Injection](#dpin)
-  - [Add Tests](#adte)
-- [Tutorial](#Tutorial)
-
+![](https://s32.postimg.org/z70w78wsl/next_pack_logo.png)
 
 
 
@@ -38,10 +22,10 @@ It's made to help PHP developers producing more Open Source Composer Packages wi
 __Nextpack includes:__
 
 - **Rich package skeleton**, (containing common files required by almost every PHP package)
-- **Reay Unit Test**,
-- **Read config files reader**
+- Ready **Unit Test**
+- Ready **config files reader**
 - Ready **Servie Provider** (for Laravel)
-- **Ready Facade Class** (for Laravel)
+- Ready **Facade Class** (for Laravel)
 - Version Control: **Git** (`.gitattributes`, `.gitignore`)
 - Continuous Integration: **Travis** and **Scrutinizer** (`.scrutinizer.yml`, `.travis.yml`)
 - Testing: **PHPUnit** (`phpunit.xml`)
