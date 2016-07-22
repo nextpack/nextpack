@@ -1,15 +1,15 @@
-# Nextpack
+# Nextpack (Drivers Mode)
 
 [![Latest Stable Version](https://poser.pugx.org/nextpack/nextpack/v/stable)](https://packagist.org/packages/nextpack/nextpack) 
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/nextpack/nextpack?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![License](https://poser.pugx.org/nextpack/nextpack/license)](https://packagist.org/packages/nextpack/nextpack)
-[![Mahmoud Zalt](https://img.shields.io/badge/Author-Mahmoud%20Zalt-orange.svg)](http://www.mahmoudzalt.com)
+[![Mahmoud Zalt](https://img.shields.io/badge/Author-Mahmoud%20Zalt-orange.svg)](http://www.zalt.me)
 
 **A PHP Package Framework** (Designed to help you build high quality PHP Packages faster).
 
+The Nextpack (Drivers Mode) is a start package specific for the drivers driven packages! Example: when a package needs to support multiple similar drivers (providers) shuch as Bit.ly and Goo.gl or Twitter and Facebook..
+
 Nextpack strives to facilitates and boosts the development process of PHP Packages. And it highly recommend producing framework agnostic packages.
-
-
 
 
 
@@ -63,7 +63,7 @@ __Nextpack includes:__
   - Continuous Integration: **Travis** and **Scrutinizer** (`.scrutinizer.yml`, `.travis.yml`)
   - Testing: **PHPUnit** (`phpunit.xml`)
   - Package Manager: **Composer** (`composer.json`)
-- **Common functionalities**, (provided by the **Nextpack Library** `nextpack/library`).
+- **Common functionalities**, (provided by the **Nextpack Library**).
   - **Read config files**, and serve it in the package classes
   - **Initialize drivers automatically** _"in case the package supports multiple drivers/providers"_
 
@@ -94,17 +94,6 @@ __Nextpack includes:__
 1. `git clone https://github.com/nextpack/nextpack.git`
 2. `composer update`
 3. make sure everything is OK by running the tests `phpunit`
-
-
-
-
-<a name="Dependencies"></a>
-##### Internal Composer Dependencies:
-
-The Nextpack Framework `nextpack/nextpack` requires a Library `nextpack/library` which in turn requires `illuminate/support`, `illuminate/config` and `symfony/finder`.
-
-
-
 
 
 
