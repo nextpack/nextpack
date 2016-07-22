@@ -1,16 +1,12 @@
 <?php
-
 namespace Nextpack\Nextpack\Exceptions;
 
-use Exception as CoreException;
-
 /**
- * Class Exception
+ * Class ConfigFileNotFoundException
  *
  * @author  Mahmoud Zalt  <mahmoud@zalt.me>
  */
-class Exception extends CoreException
+class ConfigFileNotFoundException extends Exception
 {
 
 }
-

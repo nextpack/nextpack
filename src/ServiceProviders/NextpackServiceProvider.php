@@ -1,14 +1,16 @@
 <?php
-namespace Nextpack\Nextpack;
+
+namespace Nextpack\Nextpack\ServiceProviders;
 
 use Illuminate\Support\ServiceProvider;
+use Nextpack\Nextpack\Contracts\SampleInterface;
+use Nextpack\Nextpack\Facades\SampleFacadeAccessor;
+use Nextpack\Nextpack\Sample;
 
 /**
  * Class NextpackServiceProvider
  *
- * @category Service Provider
- * @package  Nextpack\Nextpack
- * @author   Mahmoud Zalt <mahmoud@zalt.me>
+ * @author  Mahmoud Zalt  <mahmoud@zalt.me>
  */
 class NextpackServiceProvider extends ServiceProvider
 {
@@ -68,8 +70,8 @@ class NextpackServiceProvider extends ServiceProvider
     private function implementationBindings()
     {
         $this->app->bind(
-            'Nextpack\Nextpack\Contracts\SayInterface',
-            'Nextpack\Nextpack\Say'
+            SampleInterface::class,
+            Sample::class
         );
     }
 
@@ -90,14 +92,14 @@ class NextpackServiceProvider extends ServiceProvider
     private function facadeBindings()
     {
         // Register 'nextpack.say' instance container
-        $this->app['nextpack.say'] = $this->app->share(function ($app) {
-            return $app->make('Nextpack\Nextpack\Say');
+        $this->app['nextpack.sample'] = $this->app->share(function ($app) {
+            return $app->make(Sample::class);
         });
 
-        // Register 'Say' Alias, So users don't have to add the Alias to the 'app/config/app.php'
+        // Register 'Sample' Alias, So users don't have to add the Alias to the 'app/config/app.php'
         $this->app->booting(function () {
             $loader = \Illuminate\Foundation\AliasLoader::getInstance();
-            $loader->alias('Nextpack', 'Nextpack\Nextpack\Facades\SayFacadeAccessor');
+            $loader->alias('Sample', SampleFacadeAccessor::class);
         });
     }
 

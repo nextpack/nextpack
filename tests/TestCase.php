@@ -1,18 +1,30 @@
 <?php
+
 namespace Nextpack\Nextpack\Tests;
 
-use Nextpack\Library\AbstractTestCase;
-use Mockery as M;
+use PHPUnit_Framework_TestCase as PHPUnit;
 
 /**
- * Class TestCase is the parent class of all Tests in the package.
- * Every Test must extend from this TestCase.
+ * Class TestCase
  *
- * @category Parent TestCase
- * @package Nextpack\Nextpack\Tests
- * @author  Mahmoud Zalt <mahmoud@zalt.me>
+ * @author  Mahmoud Zalt  <mahmoud@zalt.me>
  */
-class TestCase extends AbstractTestCase
+class TestCase extends PHPUnit
 {
+
+    public function __construct()
+    {
+        parent::__construct();
+    }
+
+    public function setUp()
+    {
+        parent::setUp();
+    }
+
+    public function tearDown()
+    {
+        parent::tearDown();
+    }
 
 }

@@ -1,16 +1,15 @@
 <?php
+
 namespace Nextpack\Nextpack\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
 /**
- * Class SayFacadeAccessor the Facade Accessor of the Say Facade
+ * Class SampleFacadeAccessor
  *
- * @category
- * @package Nextpack\Nextpack\Facades
- * @author  Mahmoud Zalt <mahmoud@zalt.me>
+ * @author  Mahmoud Zalt  <mahmoud@zalt.me>
  */
-class SayFacadeAccessor extends Facade
+class SampleFacadeAccessor extends Facade
 {
 
     /**
@@ -20,6 +19,6 @@ class SayFacadeAccessor extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'nextpack.say';
+        return 'nextpack.sample';
     }
 }
