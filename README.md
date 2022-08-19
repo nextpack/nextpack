@@ -34,7 +34,7 @@ __Nextpack includes:__
 - **Rich package skeleton**, (containing common files required by almost every PHP package)
 - Ready **Unit Test**
 - Ready **config files reader**
-- Ready **Servie Provider** (for Laravel)
+- Ready **Service Provider** (for Laravel)
 - Ready **Facade Class** (for Laravel)
 - Version Control: **Git** (`.gitattributes`, `.gitignore`)
 - Continuous Integration: **Travis** and **Scrutinizer** (`.scrutinizer.yml`, `.travis.yml`)
